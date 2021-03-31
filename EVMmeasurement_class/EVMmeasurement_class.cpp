@@ -2,10 +2,51 @@
 //
 
 #include <iostream>
+#include <sstream>
+#include <string>
 
-int main()
+using namespace std;
+
+class Power_Amplifier
 {
-    std::cout << "Hello World!\n";
+public: 
+
+    string Linearity; 
+    string Efficiency; 
+    int peak_power; 
+    int ACLR; 
+    int Return_loss; 
+    int EVM; 
+
+};
+
+class Class_A : virtual public Power_Amplifier
+
+{
+
+};
+
+class Class_B : virtual public Power_Amplifier
+
+{
+
+};
+
+class Class_C : virtual public Power_Amplifier
+
+{
+
+};
+
+class Doherty_PA : public Class_A, public Class_B, public Class_C
+
+{
+
+};
+
+ int main()
+{
+    cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
